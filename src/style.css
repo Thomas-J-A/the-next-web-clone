@@ -82,6 +82,7 @@ header {
   display: flex;
   align-items: center;
   padding: 1.6rem;
+  z-index: 99;
   box-shadow: 0 2rem 2rem -1rem rgba(0,0,0,.1);
   color: #aaa;
   background-color: #f7f8f8;
@@ -138,6 +139,7 @@ Banner
 .banner {
   display: none;
   width: 100%;
+  z-index: 99;
   padding: 1.5rem 2rem;
   font-size: 1.35rem;
   background-color: #f9d731;
@@ -178,34 +180,76 @@ Showcase
   gap: 1rem;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 5rem;
+  padding: 4rem;
   color: #fff;
 }
 
-.showcase div:nth-child(1) {
+.showcase_article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.showcase_article h6 {
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+}
+
+.showcase_article h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.conference-invite {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.conference-invite p {
+  font-size: 2.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.conference-invite button {
+  margin-top: 1.5rem;
+  padding: 1.3rem 2.3rem;
+  border: 1px solid #fff;
+  border-radius: 4rem;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.showcase_article:nth-child(1) {
   grid-column: 1/3;
   grid-row: 1/3;
-  background: url('./images/showcase-images/tattoo.jpeg') no-repeat;
+  background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('./images/showcase-images/tattoo.jpeg') no-repeat;
   background-size: cover;
 }
 
-.showcase div:nth-child(2) {
-  background: url('./images/showcase-images/bookshelves.jpeg') no-repeat;
+.showcase_article:nth-child(2) {
+  background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('./images/showcase-images/bookshelves.jpeg') no-repeat;
   background-size: cover;
 }
 
-.showcase div:nth-child(3) {
-  background: url('./images/showcase-images/conference.jpg') no-repeat;
+.showcase_article:nth-child(3) {
+  background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('./images/showcase-images/conference.jpg') no-repeat;
   background-size: cover;
 }
 
-.showcase div:nth-child(4) {
-  background: url('./images/showcase-images/raspberry-pi.jpeg') no-repeat;
+.showcase_article:nth-child(4) {
+  background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('./images/showcase-images/raspberry-pi.jpeg') no-repeat;
   background-size: cover;
 }
 
-.showcase div:nth-child(5) {
-  background: url('./images/showcase-images/meta.jpeg') no-repeat;
+.showcase_article:nth-child(5) {
+  background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('./images/showcase-images/meta.jpeg') no-repeat;
   background-size: cover;
 }
 
@@ -281,7 +325,7 @@ Latest stories
     justify-content: space-between;
     align-items: center;
     margin-top: 15rem;
-    padding: 4rem 9rem;
+    padding: 4rem 8rem;
   }
 
   .main-title img {
@@ -298,22 +342,27 @@ Latest stories
     grid-template-rows: repeat(3, 200px);
   }
 
-  .showcase div:nth-child(1) {
+  .showcase_article:nth-child(1) h3,
+  .showcase_article:nth-child(5) h3 {
+    font-size: 4rem;
+  }
+
+  .showcase_article:nth-child(1) {
     grid-column: 1/3;
     grid-row: 1/3;
   }
 
-  .showcase div:nth-child(3) {
+  .showcase_article:nth-child(3) {
     grid-column: 1/3;
     grid-row: 3;
   }
 
-  .showcase div:nth-child(4) {
+  .showcase_article:nth-child(4) {
     grid-column: 4;
     grid-row: 1;
   }
 
-  .showcase div:nth-child(5) {
+  .showcase_article:nth-child(5) {
     grid-column: span 2;
     grid-row: span 2;
   }
