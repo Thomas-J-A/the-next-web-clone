@@ -11,7 +11,7 @@ import macApp from '../../images/latest-stories/mac-app.jpeg';
 
 const LatestStories = () => (
   <section className="latest-stories">
-    <h2>latest stories</h2>
+    <h2>Latest stories</h2>
 
     <div className="latest-stories_card-container">
       <div className="latest-stories_card">

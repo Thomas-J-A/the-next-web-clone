@@ -90,7 +90,7 @@ header {
 
 .icon-hamburger {
   margin-right: 1rem;
-  font-size: 2.2re
+  font-size: 2.2rem;
 }
 
 .icon-newsletter {
@@ -180,7 +180,7 @@ Showcase
   gap: 1rem;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 4rem;
+  padding: 4rem 6rem 8rem;
   color: #fff;
 }
 
@@ -260,17 +260,44 @@ Popular articles
 */
 
 .popular-articles {
-  padding: 5rem;
   background-color: #f7f8f8;
 }
 
+.popular-articles_wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 7rem 7rem 5rem;
+}
+
 .popular-articles h2 {
+  margin-bottom: 5rem;
   text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #aaa;
 }
 
 .popular-articles ol {
   max-width: 1600px;
   margin: 0 auto;
+}
+
+.popular-articles ol li {
+  margin-bottom: 3rem;
+}
+
+.popular-articles span {
+  margin-top: -.5rem;
+  margin-right: 2rem;
+  font-size: 4rem;
+  color: #cc0099;
+}
+
+.popular-articles a {
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.7rem;
+  font-weight: 600;
 }
 
 /*
@@ -282,14 +309,48 @@ Latest stories
 .latest-stories {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 5rem;
+  padding: 0 5rem;
+}
+
+.latest-stories h2 {
+  margin: 9rem 0 5rem;
+  font-size: 3.5rem;
+  font-weight: 900;
 }
 
 .latest-stories_card-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
 }
 
+.latest-stories_card img {
+  width: 100%;
+}
+
+.latest-stories_card h4 {
+  margin-top: 1.9rem;
+  font-size: 1.6rem;
+}
+
+.latest-stories_card p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #aaa;
+}
+
+.latest-stories button {
+  display: block;
+  margin: 6rem auto 5rem;
+  padding: 1.3rem 2.4rem;
+  border: 1px solid #aaa;
+  border-radius: 4rem;
+  font-weight: bold;
+  background: transparent;
+  outline: none;
+  opacity: .5;
+  cursor: pointer;
+}
 
 
 
@@ -340,6 +401,7 @@ Latest stories
   .showcase {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 200px);
+    padding: 4rem;
   }
 
   .showcase_article:nth-child(1) h3,
@@ -369,6 +431,10 @@ Latest stories
 
   .popular-articles ol {
     display: flex;
+  }
+  
+  .popular-articles ol li {
+    margin-right: 2rem;
   }
 
   .latest-stories_card-container {
