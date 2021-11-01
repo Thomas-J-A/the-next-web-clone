@@ -1,12 +1,10 @@
 import React from 'react';
+import logo from '../../images/tnw.svg';
 
 const Header = () => (
   <header className="primary-header">
     <i className="fas fa-bars icon-hamburger" />
-
-    <div className="primary-header_logo">
-      TNW
-    </div>
+    <img className="primary-header_logo" src={logo} alt='' />
 
     <nav className="primary-header_nav">
       <ul>

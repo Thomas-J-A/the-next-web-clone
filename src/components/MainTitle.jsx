@@ -1,8 +1,9 @@
 import React from 'react';
+import logo from '../images/tnw.svg';
 
 const MainTitle = () => (
   <div className="main-title">
-    <h1>TNW</h1>
+    <img src={logo} alt='' />
     <p>The heart of tech</p>
   </div>
 );

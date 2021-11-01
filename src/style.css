@@ -64,6 +64,10 @@ img {
   max-width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*
 ==============================
 Header
@@ -71,12 +75,35 @@ Header
 */
 
 header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   display: flex;
   align-items: center;
+  padding: 1.6rem;
+  box-shadow: 0 2rem 2rem -1rem rgba(0,0,0,.1);
+  color: #aaa;
+  background-color: #f7f8f8;
+}
+
+.icon-hamburger {
+  margin-right: 1rem;
+  font-size: 2.2re
 }
 
 .icon-newsletter {
   display: none;
+  font-size: 2rem;
+  opacity: .6;
+}
+
+.primary-header_logo {
+  width: 7rem;
+}
+
+.primary-header_logo {
+  cursor: pointer;
 }
 
 .primary-header_nav {
@@ -85,6 +112,21 @@ header {
 
 .primary-header_nav ul {
   display: flex;
+  text-transform: uppercase;
+}
+
+.primary-header_nav li {
+  margin-right: 0;
+}
+
+.primary-header_nav a {
+  padding: 1.3em 1rem;
+  font-size: 1.5rem;
+  color: rgba(0,0,0,.8); 
+}
+
+.primary-header_nav a:hover {
+  background-color: #fff;
 }
 
 /*
@@ -95,6 +137,10 @@ Banner
 
 .banner {
   display: none;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  font-size: 1.35rem;
+  background-color: #f9d731;
 }
 
 /*
@@ -104,11 +150,19 @@ Main title
 */
 
 .main-title {
+  max-width: 1280px;
+  margin: 8.5rem auto 0;
   text-align: center;
 }
 
-.main-title h1 {
-  font-size: 8rem;
+.main-title img {
+  width: 40rem;
+  margin-bottom: 1.8rem;
+}
+
+.main-title p {
+  font-size: 1.8rem;
+  opacity: .7;
 }
 
 /*
@@ -200,6 +254,7 @@ Latest stories
 @media screen and (min-width: 1024px) {
   header {
     justify-content: space-between;
+    box-shadow: none;
   }
 
   .icon-hamburger {
@@ -215,13 +270,27 @@ Latest stories
   }
 
   .banner {
+    position: fixed;
+    top: 52px;
     display: block;
+    box-shadow: 0 1.6rem 4rem -1rem rgba(0,0,0,.2);
   }
 
   .main-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 15rem;
+    padding: 4rem 9rem;
+  }
+
+  .main-title img {
+    width: 23rem;
+  }
+  
+  .main-title p {
+    font-size: 3.5rem;
+    opacity: .7;
   }
 
   .showcase {
